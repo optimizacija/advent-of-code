@@ -1,6 +1,7 @@
 package day7
 
 enum class IntOpCode(val value: Int, val length: Int) {
+    Invalid(-1, -1),
     Add(1, 4),
     Mul(2, 4),
     Input(3, 2),
@@ -23,10 +24,11 @@ class IntCodeProgram {
     var intCode: IntArray
         private set
 
-    private val inputFun: () -> Int
-    private val outputFun: (Int) -> Unit
+    var inputFun: () -> Int
+    var outputFun: (Int) -> Unit
 
-    private var opCode: IntOpCode = IntOpCode.Halt
+    var opCode: IntOpCode = IntOpCode.Invalid
+        private set
     private val modes = arrayOf(0, 0, 0)
     private val args = arrayOf(0, 0, 0)
     private var jumped = false
@@ -52,11 +54,27 @@ class IntCodeProgram {
         return true
     }
 
-    fun runUntilAfterOutput(): Boolean {
+    fun runToOpCode(intOpCode: IntOpCode): Boolean {
+        // returns false if halted before getting to output
         do {
-            val oldOpCode = opCode
             if (!step()) return false
-        } while (oldOpCode != IntOpCode.Output)
+        } while (opCode != intOpCode)
+        return true
+    }
+
+    fun runToOpCodes(intOpCodes: Array<IntOpCode>): Boolean {
+        // returns false if halted before getting to output
+        do {
+            if (!step()) return false
+        } while (intOpCodes.all { it != opCode })
+        return true
+    }
+
+    fun runUpToOpCodes(intOpCodes: Array<IntOpCode>): Boolean {
+        // returns false if halted before getting to output
+        while (intOpCodes.all { it != getNextIntOpCode() }) {
+            if (!step()) return false
+        }
         return true
     }
 
@@ -74,7 +92,11 @@ class IntCodeProgram {
         }
     }
 
-    private fun shouldHalt(): Boolean {
+    fun getNextIntOpCode(): IntOpCode {
+        return IntOpCode.fromInt(intCode[instructionPointer].toString().takeLast(2).toInt())
+    }
+
+    fun shouldHalt(): Boolean {
         return opCode == IntOpCode.Halt
     }
 
@@ -108,6 +130,7 @@ class IntCodeProgram {
 
     private fun executeCommand() {
         when (opCode) {
+            IntOpCode.Invalid -> error("tried executing IntOpCode.Invalid")
             IntOpCode.Add -> execAdd()
             IntOpCode.Mul -> execMul()
             IntOpCode.Input -> execInput()
@@ -195,8 +218,8 @@ fun main() {
         if (digits.distinct().size != digits.size)
             continue
 
-        // val thrust = getThrustOutput(arr, digits);
-        val thrust = getLoopBackTrustOutput(arr4, digits);
+        // val thrust = getNormalThrustOutput(arr, digits) // part 1
+        val thrust = getLoopBackTrustOutput(arr, digits) // part 2
 
         if (thrust > totalThrust) {
             totalThrust = thrust
@@ -206,13 +229,10 @@ fun main() {
 
     println(totalThrust)
     println(totalDigits)
-
     /*
-    val ampPhase = listOf(4,3,2,1,0)
-    val thrust = getThrustOutput(arr0, ampPhase);
-    println(thrust)
-    println(ampPhase)
 
+    val thrust = getLoopBackTrustOutput(arr, listOf(9, 8, 7, 6, 5)) // part 2
+    println("thrust $thrust")
      */
 }
 
@@ -221,30 +241,54 @@ fun intToDigits(value: Int, digitCount: Int): List<Int> {
 }
 
 fun getLoopBackTrustOutput(data: IntArray, ampPhases: List<Int>): Int {
-    var signal = 0
-    for (j in 0..4) {
-        var phaseProvided = false
-        val interpreter = IntCodeProgram(data.clone(), {
-            if (!phaseProvided) {
-                println("one")
-                phaseProvided = true
-                ampPhases[j]
-            } else {
-                println("two")
-                signal
-            }
-        }, {
-            println("three")
-            signal = it
-        })
+    val signals = intArrayOf(0, -1, -1, -1, -1)
 
-        interpreter.run()
+    val interpreters = List(5) { index ->
+        IntCodeProgram(
+            data.clone(),
+            { println("one ${ampPhases[index]}"); ampPhases[index] },
+            { println("two $it"); signals[(index + 1) % 5] = it })
     }
 
-    return signal
+    println("before")
+    // init with amplitude phasees
+    for (interpreter in interpreters) {
+        interpreter.runToOpCode(IntOpCode.Input)
+    }
+    println("after")
+
+    // change input function
+    for (index in 0..4) {
+        val interpreter = interpreters[index]
+        interpreter.inputFun = {
+            println("one ${signals[index]}");
+            val signal = signals[index]
+            signals[index] = -1
+            signal
+        }
+    }
+
+    while (!interpreters.last().shouldHalt()) {
+        forLoop@ for (index in 0..4) {
+            val interpreter = interpreters[index]
+            if (!interpreter.runUpToOpCodes(arrayOf(IntOpCode.Input, IntOpCode.Output)))
+                continue
+            val nextCode = interpreter.getNextIntOpCode()
+            when (nextCode) {
+                IntOpCode.Input -> if (signals[index] == -1) continue@forLoop
+                IntOpCode.Output -> if (signals[(index + 1) % 5] != -1) continue@forLoop
+                else -> error("wrong IntOpCode $nextCode")
+            }
+            interpreter.runToOpCodes(arrayOf(IntOpCode.Input, IntOpCode.Output))
+        }
+    }
+    println("juan")
+    println(signals.contentToString())
+
+    return signals[0]
 }
 
-fun getThrustOutput(data: IntArray, ampPhases: List<Int>): Int {
+fun getNormalThrustOutput(data: IntArray, ampPhases: List<Int>): Int {
     var signal = 0
     for (j in 0..4) {
         var phaseProvided = false
