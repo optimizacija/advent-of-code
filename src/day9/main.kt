@@ -123,6 +123,8 @@ class IntCodeProgram {
             0 -> return intCode[args[argIndex]]
             // immediate
             1 -> return args[argIndex]
+            // relative
+            2 -> return intCode[args[relativeBase + argIndex]]
             else -> throw Exception("Invalid mode")
         }
     }
@@ -149,6 +151,7 @@ class IntCodeProgram {
             IntOpCode.JumpZero -> execJumpZero()
             IntOpCode.LessThan -> execLessThan()
             IntOpCode.Equals -> execEquals()
+            IntOpCode.AdjustRelativeBase -> execAdjustRelativeBase()
             IntOpCode.Halt -> return
         }
     }
@@ -214,6 +217,11 @@ class IntCodeProgram {
             write(0)
         }
     }
+
+    private fun execAdjustRelativeBase() {
+        relativeBase += read(0)
+    }
+
 }
 
 fun main() {
