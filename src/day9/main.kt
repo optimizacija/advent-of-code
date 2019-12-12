@@ -1,5 +1,18 @@
 package day9
 
+import java.math.BigInteger
+
+fun <T> MutableList<T>.clone(): MutableList<T> {
+    val mutableList = mutableListOf<T>()
+    mutableList.addAll(this)
+    return mutableList
+}
+
+// only for when int >= 0
+fun BigInteger.toDigits(digitCount: Int): List<Int> {
+    return this.toString().padStart(digitCount, '0').toCharArray().map { it - '0' }
+}
+
 enum class IntOpCode(val value: Int, val length: Int) {
     Invalid(-1, -1),
     Add(1, 4),
@@ -21,23 +34,29 @@ enum class IntOpCode(val value: Int, val length: Int) {
 }
 
 class IntCodeProgram {
-    private var instructionPointer = 0
-    var intCode: IntArray
+    var intCode: MutableList<BigInteger>
         private set
 
-    var inputFun: () -> Int
-    var outputFun: (Int) -> Unit
+    var inputFun: () -> BigInteger
+    var outputFun: (BigInteger) -> Unit
 
-    var opCode: IntOpCode = IntOpCode.Invalid
-        private set
+    private var opCode: IntOpCode = IntOpCode.Invalid
     private val modes = arrayOf(0, 0, 0)
-    private val args = arrayOf(0, 0, 0)
+    private val args = arrayOf(0, 0, 0).map { it.toBigInteger() }.toMutableList()
     private var jumped = false
+    private var instructionPointer = 0
     private var relativeBase = 0
 
 
-    constructor(code: IntArray, inputFunCallback: () -> Int, outputFunCallback: (Int) -> Unit) {
-        intCode = code
+    constructor(
+        code: MutableList<BigInteger>,
+        inputFunCallback: () -> BigInteger,
+        outputFunCallback: (BigInteger) -> Unit
+    ) {
+        intCode = MutableList(100000) { 0.toBigInteger() }
+        for (i in code.indices) {
+            intCode[i] = code[i]
+        }
         inputFun = inputFunCallback
         outputFun = outputFunCallback
     }
@@ -96,7 +115,7 @@ class IntCodeProgram {
         opCode = IntOpCode.fromInt(opDigits[0] * 10 + opDigits[1])
 
         // read arg modes
-        val modeDigits = digits.dropLast(2)
+        val modeDigits = digits.dropLast(2).reversed()
         for (i in modeDigits.indices) {
             modes[i] = modeDigits[i]
         }
@@ -117,20 +136,20 @@ class IntCodeProgram {
         }
     }
 
-    private fun read(argIndex: Int): Int {
+    private fun read(argIndex: Int): BigInteger {
         when (modes[argIndex]) {
             // position
-            0 -> return intCode[args[argIndex]]
+            0 -> return intCode[args[argIndex].toInt()]
             // immediate
             1 -> return args[argIndex]
             // relative
-            2 -> return intCode[args[relativeBase + argIndex]]
+            2 -> return intCode[relativeBase + args[argIndex].toInt()]
             else -> throw Exception("Invalid mode")
         }
     }
 
-    private fun write(value: Int) {
-        intCode[args[opCode.length - 2]] = value
+    private fun write(value: BigInteger) {
+        intCode[args[opCode.length - 2].toInt()] = value
     }
 
     private fun updateInstructionPointer() {
@@ -181,8 +200,8 @@ class IntCodeProgram {
     private fun execJumpNonZero() {
         val val1 = read(0)
 
-        if (val1 != 0) {
-            instructionPointer = read(1)
+        if (val1 != 0.toBigInteger()) {
+            instructionPointer = read(1).toInt()
             jumped = true
         }
     }
@@ -190,8 +209,8 @@ class IntCodeProgram {
     private fun execJumpZero() {
         val val1 = read(0)
 
-        if (val1 == 0) {
-            instructionPointer = read(1)
+        if (val1 == 0.toBigInteger()) {
+            instructionPointer = read(1).toInt()
             jumped = true
         }
     }
@@ -201,9 +220,9 @@ class IntCodeProgram {
         val val2 = read(1)
 
         if (val1 < val2) {
-            write(1)
+            write(1.toBigInteger())
         } else {
-            write(0)
+            write(0.toBigInteger())
         }
     }
 
@@ -212,22 +231,24 @@ class IntCodeProgram {
         val val2 = read(1)
 
         if (val1 == val2) {
-            write(1)
+            write(1.toBigInteger())
         } else {
-            write(0)
+            write(0.toBigInteger())
         }
     }
 
     private fun execAdjustRelativeBase() {
-        relativeBase += read(0)
+        relativeBase += read(0).toInt()
     }
 
 }
 
 fun main() {
-}
 
-fun Int.toDigits(digitCount: Int): List<Int> {
-    return this.toString().padStart(digitCount, '0').toCharArray().map { it - '0' }
+    // arr0.filter { it >= 0 }.map { it.toDigits(10) }.forEach { println(it) }
+
+    val program = IntCodeProgram(arr.clone(), { readLine()!!.toBigInteger() }, { println(it) })
+    program.run()
+    println(program.intCode)
 }
 
