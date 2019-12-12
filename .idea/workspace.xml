@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb555733-7daa-4e3a-ad66-5c3785e16ba8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/day8/data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day8/main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day8/test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day8/test2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day8/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day8/main.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1576155290663</updated>
       <workItem from="1576155293765" duration="388000" />
-      <workItem from="1576155807795" duration="1870000" />
+      <workItem from="1576155807795" duration="2207000" />
     </task>
     <task id="LOCAL-00001" summary="added .idea/">
       <created>1576156037600</created>
@@ -119,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576156037600</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added day8">
+      <created>1576158266375</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576158266375</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +144,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added .idea/" />
-    <option name="LAST_COMMIT_MESSAGE" value="added .idea/" />
+    <MESSAGE value="added day8" />
+    <option name="LAST_COMMIT_MESSAGE" value="added day8" />
   </component>
 </project>

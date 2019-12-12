@@ -10,12 +10,10 @@ fun main() {
     val newlayer = CharArray(leastZerosLayer.length)
     for (i in leastZerosLayer.indices) {
         var value = '2'
-        for(j in layers.indices) {
-            if(layers[j][i] != '2')  {
-                value = layers[j][i]
-                break
-            }
-        }
+        val non2 = layers.withIndex().find { layers[it.index][i] != '2' }
+        if (non2 != null)
+            value = non2.value[i]
+
         newlayer[i] = value
     }
 
