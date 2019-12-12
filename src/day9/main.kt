@@ -247,7 +247,7 @@ fun main() {
 
     // arr0.filter { it >= 0 }.map { it.toDigits(10) }.forEach { println(it) }
 
-    val program = IntCodeProgram(arr.clone(), { readLine()!!.toBigInteger() }, { println(it) })
+    val program = IntCodeProgram(arr.clone(), { print("input: ");readLine()!!.toBigInteger() }, { println(it) })
     program.run()
     println(program.intCode)
 }
