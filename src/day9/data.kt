@@ -1,5 +1,15 @@
 package day9
 
+import java.math.BigInteger
+
+fun Array<Long>.toBigIntegerMutableList(): MutableList<BigInteger> {
+    return this.map { it.toBigInteger() }.toMutableList()
+}
+
+fun Array<Int>.toBigIntegerMutableList(): MutableList<BigInteger> {
+    return this.map { it.toBigInteger() }.toMutableList()
+}
+
 val arr = arrayOf(
     1102,
     34463338,
@@ -974,17 +984,17 @@ val arr = arrayOf(
     2106,
     0,
     0
-).map { it.toBigInteger() }.toMutableList()
+).toBigIntegerMutableList()
 
 val arr0 = arrayOf(
     109, 1, 204, -1, 1001, 100, 1, 100, 1008, 100, 16, 101, 1006, 101, 0, 99
-).map { it.toBigInteger() }.toMutableList()
+).toBigIntegerMutableList()
 
 val arr1 = arrayOf(
     1102, 34915192, 34915192, 7, 4, 7, 99, 0
-).map { it.toBigInteger() }.toMutableList()
+).toBigIntegerMutableList()
 
 val arr2 = arrayOf(
     104, 1125899906842624, 99
-).map { it.toBigInteger() }.toMutableList()
+).toBigIntegerMutableList()
 

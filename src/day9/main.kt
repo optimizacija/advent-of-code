@@ -10,6 +10,9 @@ fun <T> MutableList<T>.clone(): MutableList<T> {
 
 // only for when int >= 0
 fun BigInteger.toDigits(digitCount: Int): List<Int> {
+    if (this < 0.toBigInteger()) // TODO("test only, should be removed")
+        throw error("value should not be negative")
+
     return this.toString().padStart(digitCount, '0').toCharArray().map { it - '0' }
 }
 
@@ -42,7 +45,7 @@ class IntCodeProgram {
 
     private var opCode: IntOpCode = IntOpCode.Invalid
     private val modes = arrayOf(0, 0, 0)
-    private val args = arrayOf(0, 0, 0).map { it.toBigInteger() }.toMutableList()
+    private val args = arrayOf(0, 0, 0).toBigIntegerMutableList()
     private var jumped = false
     private var instructionPointer = 0
     private var relativeBase = 0
@@ -70,9 +73,19 @@ class IntCodeProgram {
         readModeCode()
         if (shouldHalt()) return false
         readArgs()
+        debugPrint()
         executeCommand()
         updateInstructionPointer()
         return true
+    }
+
+    private fun debugPrint() {
+        print("${opCode.name}: ")
+        for (i in 0..(opCode.length - 2)) {
+            val value = read(i)
+            print("$value ")
+        }
+        println()
     }
 
     fun runToOpCode(intOpCode: IntOpCode): Boolean {
@@ -121,14 +134,13 @@ class IntCodeProgram {
         }
     }
 
-    fun getNextIntOpCode(): IntOpCode {
+    private fun getNextIntOpCode(): IntOpCode {
         return IntOpCode.fromInt(intCode[instructionPointer].toString().takeLast(2).toInt())
     }
 
-    fun shouldHalt(): Boolean {
+    private fun shouldHalt(): Boolean {
         return opCode == IntOpCode.Halt
     }
-
 
     private fun readArgs() {
         for (i in 0..(opCode.length - 2)) {
@@ -137,14 +149,14 @@ class IntCodeProgram {
     }
 
     private fun read(argIndex: Int): BigInteger {
-        when (modes[argIndex]) {
+        return when (modes[argIndex]) {
             // position
-            0 -> return intCode[args[argIndex].toInt()]
+            0 -> intCode[args[argIndex].toInt()]
             // immediate
-            1 -> return args[argIndex]
+            1 -> args[argIndex]
             // relative
-            2 -> return intCode[relativeBase + args[argIndex].toInt()]
-            else -> throw Exception("Invalid mode")
+            2 -> intCode[relativeBase + args[argIndex].toInt()]
+            else -> throw Exception("Invalid mode ${modes[argIndex]}")
         }
     }
 
@@ -240,14 +252,13 @@ class IntCodeProgram {
     private fun execAdjustRelativeBase() {
         relativeBase += read(0).toInt()
     }
-
 }
 
 fun main() {
 
     // arr0.filter { it >= 0 }.map { it.toDigits(10) }.forEach { println(it) }
 
-    val program = IntCodeProgram(arr.clone(), { print("input: ");readLine()!!.toBigInteger() }, { println(it) })
+    val program = IntCodeProgram(arr.clone(), { print("> "); readLine()!!.toBigInteger() }, { println(it) })
     program.run()
     println(program.intCode)
 }
