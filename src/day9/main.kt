@@ -73,7 +73,7 @@ class IntCodeProgram {
         readModeCode()
         if (shouldHalt()) return false
         readArgs()
-        debugPrint()
+        // debugPrint()
         executeCommand()
         updateInstructionPointer()
         return true
@@ -161,7 +161,15 @@ class IntCodeProgram {
     }
 
     private fun write(value: BigInteger) {
-        intCode[args[opCode.length - 2].toInt()] = value
+        val lastIndex = opCode.length - 2
+        val index = args[lastIndex].toInt()
+        when (modes[lastIndex]) {
+            0 -> intCode[index] = value
+            1 -> error("write is not supported in immediate mode (1)")
+            2 -> intCode[relativeBase + index] = value
+            else -> error("unknown mode ${modes[lastIndex]}")
+        }
+
     }
 
     private fun updateInstructionPointer() {
