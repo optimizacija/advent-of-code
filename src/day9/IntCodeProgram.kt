@@ -16,7 +16,6 @@ class IntCodeProgram {
     private var instructionPointer = 0
     private var relativeBase = 0
 
-
     constructor(
         code: MutableList<BigInteger>,
         inputFunCallback: () -> BigInteger,
@@ -227,4 +226,3 @@ class IntCodeProgram {
         relativeBase += read(0).toInt()
     }
 }
-

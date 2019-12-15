@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb555733-7daa-4e3a-ad66-5c3785e16ba8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/day9/IntOpCode.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day10/data.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day10/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day9/IntCodeProgram.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day9/IntCodeProgram.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day9/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day9/main.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,51 +21,54 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/day3/main.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/day7/data.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8130">
-              <caret line="542" selection-start-line="542" selection-end-line="542" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/day7/main.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3795">
-              <caret line="253" column="32" selection-start-line="253" selection-start-column="32" selection-end-line="253" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/day9/data.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="1000" selection-start-line="1000" selection-end-line="1000" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/day9/main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/day9/misc.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/day9/IntCodeProgram.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/day10/data.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="116" selection-start-line="116" selection-end-line="116" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/day10/main.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+              <folding>
+                <element signature="e#15#85#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/day9/IntOpCode.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
@@ -73,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/Collections.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="2625">
               <caret line="189" column="17" selection-start-line="189" selection-start-column="17" selection-end-line="189" selection-end-column="17" />
             </state>
           </provider>
@@ -82,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.base/java/io/FileInputStream.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+            <state relative-caret-position="990">
+              <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -127,7 +134,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/day9/data.kt" />
+        <option value="$PROJECT_DIR$/src/day9/IntOpCode.kt" />
+        <option value="$PROJECT_DIR$/src/day9/misc.kt" />
         <option value="$PROJECT_DIR$/src/day9/main.kt" />
+        <option value="$PROJECT_DIR$/src/day9/IntCodeProgram.kt" />
+        <option value="$PROJECT_DIR$/src/day10/data.kt" />
+        <option value="$PROJECT_DIR$/src/day10/main.kt" />
       </list>
     </option>
   </component>
@@ -162,19 +174,7 @@
               <item name="advent-of-code" type="b2602c69:ProjectViewProjectNode" />
               <item name="advent-of-code" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="day5" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="advent-of-code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="advent-of-code" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="day7" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="advent-of-code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="advent-of-code" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="day9" type="462c0819:PsiDirectoryNode" />
+              <item name="day10" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -195,6 +195,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -214,7 +215,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.day9.MainKt">
+  <component name="RunManager" selected="Kotlin.day10.MainKt">
+    <configuration name="day10.MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="day10.MainKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="day7.MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <option name="VM_PARAMETERS" />
@@ -272,9 +286,11 @@
       <item itemvalue="Kotlin.testi.TestKt" />
       <item itemvalue="Kotlin.day7.MainKt" />
       <item itemvalue="Kotlin.day9.MainKt" />
+      <item itemvalue="Kotlin.day10.MainKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.day10.MainKt" />
         <item itemvalue="Kotlin.day9.MainKt" />
         <item itemvalue="Kotlin.day8.MainKt" />
         <item itemvalue="Kotlin.day7.MainKt" />
@@ -294,6 +310,7 @@
       <updated>1576155290663</updated>
       <workItem from="1576155293765" duration="388000" />
       <workItem from="1576155807795" duration="2207000" />
+      <workItem from="1576410295006" duration="11908000" />
     </task>
     <task id="LOCAL-00001" summary="added .idea/">
       <created>1576156037600</created>
@@ -337,17 +354,24 @@
       <option name="project" value="LOCAL" />
       <updated>1576270268275</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Day9: refactored code">
+      <created>1576270425070</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1576270425070</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3696000" />
+    <option name="totallyTimeSpent" value="16768000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1052" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1052" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2657082" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2683706" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -356,7 +380,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4765708" visible="true" weight="0.32939914" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4659212" visible="true" weight="0.32939914" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4946752" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -364,9 +388,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49840257" weight="0.32939914" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4978701" weight="0.32939914" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.52342916" side_tool="true" visible="true" weight="0.32939914" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49520767" weight="0.32939914" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49733758" weight="0.32939914" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.53407884" side_tool="true" visible="true" weight="0.32939914" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.48402557" weight="0.32939914" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -415,40 +439,23 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/advent-of-code" />
+    </ignored-roots>
     <MESSAGE value="added .idea/" />
     <MESSAGE value="added day8" />
     <MESSAGE value="added day9 with refactored readModeCode() function" />
     <MESSAGE value="Day9: Updated relative base" />
     <MESSAGE value="Day9: IntCodeProgram now usese BigInteger" />
     <MESSAGE value="Day9: IntProgram fixed, solutions to both parts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day9: IntProgram fixed, solutions to both parts" />
+    <MESSAGE value="Day9: refactored code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day9: refactored code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/day5/main.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2700">
           <caret line="180" selection-start-line="180" selection-end-line="180" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/Collections.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="189" column="17" selection-start-line="189" selection-start-column="17" selection-end-line="189" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/day9/data.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="1000" selection-start-line="1000" selection-end-line="1000" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/day9/main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -459,10 +466,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/day3/main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day7/data.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8130">
+          <caret line="542" selection-start-line="542" selection-end-line="542" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day7/main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3795">
+          <caret line="253" column="32" selection-start-line="253" selection-start-column="32" selection-end-line="253" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day9/data.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15000">
+          <caret line="1000" selection-start-line="1000" selection-end-line="1000" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day9/main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day9/misc.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/day9/IntOpCode.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/Collections.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2625">
+          <caret line="189" column="17" selection-start-line="189" selection-start-column="17" selection-end-line="189" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.base/java/io/FileInputStream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day4/main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day9/IntCodeProgram.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day10/data.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day10/main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+          <folding>
+            <element signature="e#15#85#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

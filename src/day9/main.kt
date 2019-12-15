@@ -5,4 +5,3 @@ fun main() {
     program.run()
     println(program.intCode)
 }
-
