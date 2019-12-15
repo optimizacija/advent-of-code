@@ -1,4 +1,4 @@
-package day11.PaintRobot
+package day11.paintRobot
 
 enum class PaintRobotDirection(val id: Int, val vector: Pair<Int, Int>) {
     Up(0, Pair(0, 1)),

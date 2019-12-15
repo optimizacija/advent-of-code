@@ -1,8 +1,8 @@
 package day11
 
-import day11.IntCode.IntCodeProgram
-import day11.PaintRobot.PaintRobot
-import day11.RobotProgramConnector.RobotProgramConnector
+import day11.intCode.IntCodeProgram
+import day11.paintRobot.PaintRobot
+import day11.robotProgramConnector.RobotProgramConnector
 
 fun main() {
     val program = IntCodeProgram(arr.clone())

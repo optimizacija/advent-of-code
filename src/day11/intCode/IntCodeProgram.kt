@@ -1,4 +1,4 @@
-package day11.IntCode
+package day11.intCode
 
 import day11.toBigIntegerMutableList
 import day11.toDigits

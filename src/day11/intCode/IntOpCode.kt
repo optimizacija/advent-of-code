@@ -1,4 +1,4 @@
-package day11.IntCode
+package day11.intCode
 
 enum class IntOpCode(val value: Int, val length: Int) {
     Invalid(-1, -1),

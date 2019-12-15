@@ -1,4 +1,4 @@
-package day11.PaintRobot
+package day11.paintRobot
 
 import day11.plus
 

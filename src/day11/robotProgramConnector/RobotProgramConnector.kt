@@ -1,9 +1,9 @@
-package day11.RobotProgramConnector
+package day11.robotProgramConnector
 
-import day11.IntCode.IntCodeProgram
-import day11.PaintRobot.PaintRobot
-import day11.PaintRobot.PanelColor
-import day11.PaintRobot.TurnCommand
+import day11.intCode.IntCodeProgram
+import day11.paintRobot.PaintRobot
+import day11.paintRobot.PanelColor
+import day11.paintRobot.TurnCommand
 
 class RobotProgramConnector {
     private val program: IntCodeProgram

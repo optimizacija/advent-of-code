@@ -1,4 +1,4 @@
-package day11.PaintRobot
+package day11.paintRobot
 
 enum class TurnCommand(val value: Int) {
     TurnLeft(0),

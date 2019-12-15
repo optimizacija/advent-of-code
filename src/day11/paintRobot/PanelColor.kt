@@ -1,4 +1,4 @@
-package day11.PaintRobot
+package day11.paintRobot
 
 
 enum class PanelColor(val value: Int) {
