@@ -11,7 +11,7 @@ fun main() {
 
     program.run()
     println(robot.visitedPanels.size)
-    // val image = robot.genPanelImage()
-    // print(image)
-    // println()
+    val image = robot.genPanelImage()
+    print(image)
+    println()
 }
