@@ -1,4 +1,4 @@
-package day12
+package day12.part1
 
 fun main() {
     val simulator = MoonForceSimulator()
@@ -7,6 +7,4 @@ fun main() {
 
     simulator.run(1000)
     println(simulator.totalEnergy())
-
-
 }

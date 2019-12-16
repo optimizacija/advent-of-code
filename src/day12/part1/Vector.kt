@@ -1,4 +1,4 @@
-package day12
+package day12.part1
 
 data class Vector(var x: Int = 0, var y: Int = 0, var z: Int = 0) {
 

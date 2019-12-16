@@ -1,4 +1,4 @@
-package day12
+package day12.part1
 
 val arr0 = arrayOf(
     Vector(x = -4, y = 3, z = 15),

@@ -1,4 +1,4 @@
-package day12
+package day12.part1
 
 data class Moon(var position: Vector, var velocity: Vector = Vector()) {
 

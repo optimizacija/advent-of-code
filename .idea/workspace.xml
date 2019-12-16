@@ -6,6 +6,8 @@
       <change afterPath="$PROJECT_DIR$/src/day12/part2/MoonForceSimulator.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/day12/part2/data.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/day12/part2/main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day12/part2/test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/day12/Moon.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day12/part1/Moon.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/day12/MoonForceSimulator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day12/part1/MoonForceSimulator.kt" afterDir="false" />
@@ -62,7 +64,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -82,7 +84,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.day8.MainKt">
+  <component name="RunManager" selected="Kotlin.day12.part2.MainKt">
     <configuration name="day10.MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <option name="VM_PARAMETERS" />
@@ -157,8 +159,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.day8.MainKt" />
         <item itemvalue="Kotlin.day12.part2.MainKt" />
+        <item itemvalue="Kotlin.day8.MainKt" />
         <item itemvalue="Kotlin.day11.MainKt" />
         <item itemvalue="Kotlin.day12.part1.MainKt" />
         <item itemvalue="Kotlin.day10.MainKt" />
@@ -190,7 +192,9 @@
       <workItem from="1576155293765" duration="388000" />
       <workItem from="1576155807795" duration="2207000" />
       <workItem from="1576410295006" duration="27939000" />
-      <workItem from="1576479869326" duration="1694000" />
+      <workItem from="1576479869326" duration="2084000" />
+      <workItem from="1576482172011" duration="285000" />
+      <workItem from="1576482508529" duration="888000" />
     </task>
     <task id="LOCAL-00001" summary="added .idea/">
       <created>1576156037600</created>
@@ -262,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576435525133</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Meta: added .idea/workspace.xml to .gitignore">
+      <created>1576481865738</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1576481865738</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,9 +320,14 @@
     <MESSAGE value="Day10: Completed part 1 and part 2" />
     <MESSAGE value="Day 11: part1 completed, part 2 continued" />
     <MESSAGE value="Day 11: part 2 completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 11: part 2 completed" />
+    <MESSAGE value="Meta: added .idea/workspace.xml to .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Meta: added .idea/workspace.xml to .gitignore" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="562" y="-775" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576482828636">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state x="562" y="-775" key="#com.intellij.fileTypes.FileTypeChooser/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576482828636" />
     <state x="479" y="-916" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1576481693573">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
@@ -320,9 +336,37 @@
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
     <state x="596" y="-929" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576479944006" />
-    <state x="310" y="-1007" key="SettingsEditor" timestamp="1576480125767">
+    <state x="416" y="-986" key="CommitChangelistDialog2" timestamp="1576481865522">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state x="310" y="-1007" key="SettingsEditor/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576480125767" />
+    <state x="416" y="-986" key="CommitChangelistDialog2/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576481865522" />
+    <state width="860" height="326" key="GridCell.Tab.0.bottom" timestamp="1576483615307">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state width="860" height="326" key="GridCell.Tab.0.bottom/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576483615307" />
+    <state width="860" height="326" key="GridCell.Tab.0.center" timestamp="1576483615306">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state width="860" height="326" key="GridCell.Tab.0.center/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576483615306" />
+    <state width="860" height="326" key="GridCell.Tab.0.left" timestamp="1576483615305">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state width="860" height="326" key="GridCell.Tab.0.left/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576483615305" />
+    <state width="860" height="326" key="GridCell.Tab.0.right" timestamp="1576483615306">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state width="860" height="326" key="GridCell.Tab.0.right/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576483615306" />
+    <state x="310" y="-1007" key="SettingsEditor" timestamp="1576482554712">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state x="310" y="-1007" key="SettingsEditor/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576482554712" />
+    <state x="422" y="-849" key="Vcs.Push.Dialog.v2" timestamp="1576481868153">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state x="422" y="-849" key="Vcs.Push.Dialog.v2/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576481868153" />
+    <state x="216" y="-862" key="new project wizard" timestamp="1576482345351">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state x="216" y="-862" key="new project wizard/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576482345351" />
   </component>
 </project>
