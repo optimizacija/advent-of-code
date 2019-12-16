@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb555733-7daa-4e3a-ad66-5c3785e16ba8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/day12/part2/Moon.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day12/part2/MoonForceSimulator.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day12/part2/data.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day12/part2/main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day12/part2/test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day13/connector/Connector.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day13/data.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day13/intCode/IntCodeProgram.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day13/intCode/IntOpCode.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day13/main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day13/misc.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day13/screenRenderer/ScreenRenderer.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day13/screenRenderer/TileId.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day12/Moon.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day12/part1/Moon.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day12/MoonForceSimulator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day12/part1/MoonForceSimulator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day12/Vector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day12/part1/Vector.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day12/data.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day12/part1/data.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day12/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day12/part1/main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +50,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/day11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/day13" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,42 +59,31 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/day12/part1" />
-    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="day12.part1" />
       <recent name="day11.PaintRobot" />
       <recent name="day11.Ship" />
       <recent name="day11.IntCode" />
     </key>
-    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
-      <recent name="day12.part2" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/day13" />
       <recent name="$PROJECT_DIR$/src/day11" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="day13.rendererProgramConnector" />
+      <recent name="day12.part2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/day12/part1" />
+    </key>
   </component>
-  <component name="RunManager" selected="Kotlin.day12.part2.MainKt">
-    <configuration name="day10.MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="day10.MainKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.day13.MainKt">
     <configuration name="day11.MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <option name="VM_PARAMETERS" />
@@ -137,6 +123,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="day13.MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="day13.MainKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="day8.MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <option name="VM_PARAMETERS" />
@@ -151,19 +150,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Kotlin.day10.MainKt" />
       <item itemvalue="Kotlin.day11.MainKt" />
       <item itemvalue="Kotlin.day12.part1.MainKt" />
       <item itemvalue="Kotlin.day12.part2.MainKt" />
       <item itemvalue="Kotlin.day8.MainKt" />
+      <item itemvalue="Kotlin.day13.MainKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.day13.MainKt" />
         <item itemvalue="Kotlin.day12.part2.MainKt" />
         <item itemvalue="Kotlin.day8.MainKt" />
         <item itemvalue="Kotlin.day11.MainKt" />
         <item itemvalue="Kotlin.day12.part1.MainKt" />
-        <item itemvalue="Kotlin.day10.MainKt" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +193,7 @@
       <workItem from="1576410295006" duration="27939000" />
       <workItem from="1576479869326" duration="2084000" />
       <workItem from="1576482172011" duration="285000" />
-      <workItem from="1576482508529" duration="888000" />
+      <workItem from="1576482508529" duration="4754000" />
     </task>
     <task id="LOCAL-00001" summary="added .idea/">
       <created>1576156037600</created>
@@ -273,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576481865738</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Day 12: part2 completed">
+      <created>1576484014057</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1576484014057</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +327,8 @@
     <MESSAGE value="Day 11: part1 completed, part 2 continued" />
     <MESSAGE value="Day 11: part 2 completed" />
     <MESSAGE value="Meta: added .idea/workspace.xml to .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Meta: added .idea/workspace.xml to .gitignore" />
+    <MESSAGE value="Day 12: part2 completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 12: part2 completed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="562" y="-775" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576482828636">
@@ -332,38 +339,42 @@
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
     <state x="479" y="-916" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576481693573" />
-    <state x="596" y="-929" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1576479944006">
+    <state x="458" y="-1165" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1576485695588">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state x="596" y="-929" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576479944006" />
-    <state x="416" y="-986" key="CommitChangelistDialog2" timestamp="1576481865522">
+    <state x="458" y="-1165" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576485695588" />
+    <state x="596" y="-929" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1576485516897">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state x="416" y="-986" key="CommitChangelistDialog2/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576481865522" />
-    <state width="860" height="326" key="GridCell.Tab.0.bottom" timestamp="1576483615307">
+    <state x="596" y="-929" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576485516897" />
+    <state x="416" y="-986" key="CommitChangelistDialog2" timestamp="1576484013836">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state width="860" height="326" key="GridCell.Tab.0.bottom/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576483615307" />
-    <state width="860" height="326" key="GridCell.Tab.0.center" timestamp="1576483615306">
+    <state x="416" y="-986" key="CommitChangelistDialog2/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576484013836" />
+    <state width="860" height="326" key="GridCell.Tab.0.bottom" timestamp="1576488962872">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state width="860" height="326" key="GridCell.Tab.0.center/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576483615306" />
-    <state width="860" height="326" key="GridCell.Tab.0.left" timestamp="1576483615305">
+    <state width="860" height="326" key="GridCell.Tab.0.bottom/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576488962872" />
+    <state width="860" height="326" key="GridCell.Tab.0.center" timestamp="1576488962870">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state width="860" height="326" key="GridCell.Tab.0.left/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576483615305" />
-    <state width="860" height="326" key="GridCell.Tab.0.right" timestamp="1576483615306">
+    <state width="860" height="326" key="GridCell.Tab.0.center/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576488962870" />
+    <state width="860" height="326" key="GridCell.Tab.0.left" timestamp="1576488962870">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state width="860" height="326" key="GridCell.Tab.0.right/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576483615306" />
-    <state x="310" y="-1007" key="SettingsEditor" timestamp="1576482554712">
+    <state width="860" height="326" key="GridCell.Tab.0.left/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576488962870" />
+    <state width="860" height="326" key="GridCell.Tab.0.right" timestamp="1576488962871">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state x="310" y="-1007" key="SettingsEditor/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576482554712" />
-    <state x="422" y="-849" key="Vcs.Push.Dialog.v2" timestamp="1576481868153">
+    <state width="860" height="326" key="GridCell.Tab.0.right/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576488962871" />
+    <state x="310" y="-1007" key="SettingsEditor" timestamp="1576485685973">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state x="422" y="-849" key="Vcs.Push.Dialog.v2/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576481868153" />
+    <state x="310" y="-1007" key="SettingsEditor/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576485685973" />
+    <state x="422" y="-849" key="Vcs.Push.Dialog.v2" timestamp="1576484016354">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state x="422" y="-849" key="Vcs.Push.Dialog.v2/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576484016354" />
     <state x="216" y="-862" key="new project wizard" timestamp="1576482345351">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
