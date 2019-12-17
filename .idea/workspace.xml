@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb555733-7daa-4e3a-ad66-5c3785e16ba8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/day13/connector/Connector.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day13/data.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day13/intCode/IntCodeProgram.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day13/intCode/IntOpCode.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day13/main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day13/misc.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day13/screenRenderer/ScreenRenderer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day13/screenRenderer/TileId.kt" afterDir="false" />
+    <list default="true" id="fb555733-7daa-4e3a-ad66-5c3785e16ba8" name="Default Changelist" comment="Day 13: completed part 1 and part 3">
+      <change afterPath="$PROJECT_DIR$/src/day14/ChemicalHelper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day14/backup.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day11/paintRobot/PaintRobot.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day11/paintRobot/PaintRobot.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day13/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day13/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day14/chemicalTypes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day14/chemicalTypes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day14/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day14/main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,26 +62,26 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/day12/part1" />
+    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="day12.part1" />
       <recent name="day11.PaintRobot" />
       <recent name="day11.Ship" />
       <recent name="day11.IntCode" />
     </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="day13.rendererProgramConnector" />
+      <recent name="day12.part2" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/day13" />
       <recent name="$PROJECT_DIR$/src/day11" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
-    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
-      <recent name="day13.rendererProgramConnector" />
-      <recent name="day12.part2" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/day12/part1" />
-    </key>
   </component>
-  <component name="RunManager" selected="Kotlin.day13.MainKt">
+  <component name="RunManager" selected="Kotlin.day14.MainKt">
     <configuration name="day11.MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <option name="VM_PARAMETERS" />
@@ -92,19 +90,6 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="day11.MainKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="day12.part1.MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="day12.part1.MainKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -136,6 +121,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="day14.MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="day14.MainKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="day8.MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <option name="VM_PARAMETERS" />
@@ -151,18 +149,18 @@
     </configuration>
     <list>
       <item itemvalue="Kotlin.day11.MainKt" />
-      <item itemvalue="Kotlin.day12.part1.MainKt" />
       <item itemvalue="Kotlin.day12.part2.MainKt" />
       <item itemvalue="Kotlin.day8.MainKt" />
       <item itemvalue="Kotlin.day13.MainKt" />
+      <item itemvalue="Kotlin.day14.MainKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.day14.MainKt" />
+        <item itemvalue="Kotlin.day11.MainKt" />
         <item itemvalue="Kotlin.day13.MainKt" />
         <item itemvalue="Kotlin.day12.part2.MainKt" />
         <item itemvalue="Kotlin.day8.MainKt" />
-        <item itemvalue="Kotlin.day11.MainKt" />
-        <item itemvalue="Kotlin.day12.part1.MainKt" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +191,8 @@
       <workItem from="1576410295006" duration="27939000" />
       <workItem from="1576479869326" duration="2084000" />
       <workItem from="1576482172011" duration="285000" />
-      <workItem from="1576482508529" duration="4754000" />
+      <workItem from="1576482508529" duration="5338000" />
+      <workItem from="1576564544557" duration="8413000" />
     </task>
     <task id="LOCAL-00001" summary="added .idea/">
       <created>1576156037600</created>
@@ -279,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576484014057</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Day 13: completed part 1 and part 3">
+      <created>1576488993889</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1576488993889</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +334,8 @@
     <MESSAGE value="Day 11: part 2 completed" />
     <MESSAGE value="Meta: added .idea/workspace.xml to .gitignore" />
     <MESSAGE value="Day 12: part2 completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 12: part2 completed" />
+    <MESSAGE value="Day 13: completed part 1 and part 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 13: completed part 1 and part 3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="562" y="-775" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576482828636">
@@ -347,37 +354,76 @@
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
     <state x="596" y="-929" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576485516897" />
-    <state x="416" y="-986" key="CommitChangelistDialog2" timestamp="1576484013836">
+    <state x="416" y="-986" key="CommitChangelistDialog2" timestamp="1576489010294">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state x="416" y="-986" key="CommitChangelistDialog2/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576484013836" />
-    <state width="860" height="326" key="GridCell.Tab.0.bottom" timestamp="1576488962872">
+    <state x="416" y="-986" key="CommitChangelistDialog2/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576489010294" />
+    <state width="926" height="404" key="GridCell.Tab.0.bottom" timestamp="1576576653125">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state width="860" height="326" key="GridCell.Tab.0.bottom/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576488962872" />
-    <state width="860" height="326" key="GridCell.Tab.0.center" timestamp="1576488962870">
+    <state width="926" height="404" key="GridCell.Tab.0.bottom/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576576653125" />
+    <state width="926" height="404" key="GridCell.Tab.0.center" timestamp="1576576653124">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state width="860" height="326" key="GridCell.Tab.0.center/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576488962870" />
-    <state width="860" height="326" key="GridCell.Tab.0.left" timestamp="1576488962870">
+    <state width="926" height="404" key="GridCell.Tab.0.center/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576576653124" />
+    <state width="926" height="404" key="GridCell.Tab.0.left" timestamp="1576576653123">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state width="860" height="326" key="GridCell.Tab.0.left/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576488962870" />
-    <state width="860" height="326" key="GridCell.Tab.0.right" timestamp="1576488962871">
+    <state width="926" height="404" key="GridCell.Tab.0.left/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576576653123" />
+    <state width="926" height="404" key="GridCell.Tab.0.right" timestamp="1576576653124">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state width="860" height="326" key="GridCell.Tab.0.right/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576488962871" />
-    <state x="310" y="-1007" key="SettingsEditor" timestamp="1576485685973">
+    <state width="926" height="404" key="GridCell.Tab.0.right/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576576653124" />
+    <state width="926" height="404" key="GridCell.Tab.1.bottom" timestamp="1576576653126">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state x="310" y="-1007" key="SettingsEditor/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576485685973" />
-    <state x="422" y="-849" key="Vcs.Push.Dialog.v2" timestamp="1576484016354">
+    <state width="926" height="404" key="GridCell.Tab.1.bottom/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576576653126" />
+    <state width="926" height="404" key="GridCell.Tab.1.center" timestamp="1576576653125">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
-    <state x="422" y="-849" key="Vcs.Push.Dialog.v2/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576484016354" />
+    <state width="926" height="404" key="GridCell.Tab.1.center/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576576653125" />
+    <state width="926" height="404" key="GridCell.Tab.1.left" timestamp="1576576653125">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state width="926" height="404" key="GridCell.Tab.1.left/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576576653125" />
+    <state width="926" height="404" key="GridCell.Tab.1.right" timestamp="1576576653125">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state width="926" height="404" key="GridCell.Tab.1.right/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576576653125" />
+    <state x="310" y="-1007" key="SettingsEditor" timestamp="1576570728132">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state x="310" y="-1007" key="SettingsEditor/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576570728132" />
+    <state x="422" y="-849" key="Vcs.Push.Dialog.v2" timestamp="1576489020673">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state x="422" y="-849" key="Vcs.Push.Dialog.v2/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576489020673" />
+    <state x="505" y="-790" key="git4idea.merge.GitPullDialog" timestamp="1576564563638">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state x="505" y="-790" key="git4idea.merge.GitPullDialog/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576564563638" />
     <state x="216" y="-862" key="new project wizard" timestamp="1576482345351">
       <screen x="-138" y="-1177" width="1920" height="1177" />
     </state>
     <state x="216" y="-862" key="new project wizard/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576482345351" />
+    <state x="487" y="-314" key="run.anything.popup" timestamp="1576575229092">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state x="487" y="-314" key="run.anything.popup/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576575229092" />
+    <state x="487" y="-912" width="670" height="676" key="search.everywhere.popup" timestamp="1576573374930">
+      <screen x="-138" y="-1177" width="1920" height="1177" />
+    </state>
+    <state x="487" y="-912" width="670" height="676" key="search.everywhere.popup/-138.-1177.1920.1177/0.23.1680.956@-138.-1177.1920.1177" timestamp="1576573374930" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/day14/ChemicalHelper.kt</url>
+          <line>29</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -46,13 +46,13 @@ class PaintRobot {
         val x1 = visitedPanels.map { it.key.first }.min()!!
         val x2 = visitedPanels.map { it.key.first }.max()!!
         val y1 = visitedPanels.map { it.key.second }.min()!!
-        val y2 = visitedPanels.map { it.key.second }.max()!! +1
+        val y2 = visitedPanels.map { it.key.second }.max()!!
 
-        val dx = x2 - x1
-        val dy = y2 - y1
+        val dx = x2 - x1 + 1
+        val dy = y2 - y1 + 1
 
-        // println("$x2 - $x1 = $dx")
-        // println("$y2 - $y1 = $dy")
+        println("$x2 - $x1 + 1 = $dx")
+        println("$y2 - $y1 + 1 = $dy")
 
         val result = Array(dy) {
             Array(dx) { 0 }

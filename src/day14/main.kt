@@ -1,12 +1,20 @@
 package day14
 
+fun modCeil(amount: Int, mod: Int): Int {
+    var i = mod
+    while (i < amount) {
+        i += mod
+    }
+    return i
+}
+
 class ChemicalResourceAllocator {
-    private val data: ChemicalFormulaMap
-    private val lookup: ChemicalAmountLookup
+    private val data: ReactionInputsLookup
+    private val lookup: ReactionOutputLookup
     var resources: MutableMap<Chemical, Int>
     var spentResources: MutableMap<Chemical, Int>
 
-    constructor(data: ChemicalFormulaMap, lookup: ChemicalAmountLookup) {
+    constructor(data: ReactionInputsLookup, lookup: ReactionOutputLookup) {
         this.data = data
         this.lookup = lookup
 
@@ -16,7 +24,9 @@ class ChemicalResourceAllocator {
         spentResources["ORE"] = 0
     }
 
-    fun allocateResources(chemical: String, amount: Int) {
+    fun allocateOptimally(chemical: String, amount: Int) {
+        // resources are shared by every chemical
+        // TODO: WIP
         if (canTakeResource(chemical, amount)) {
             takeResource(chemical, amount)
         } else if (chemical == "ORE") {
@@ -29,20 +39,12 @@ class ChemicalResourceAllocator {
             for (i in 0 until prodCount) {
                 val deps = data[chemicalAmount]!!
                 for (dep in deps) {
-                    allocateResources(dep.first, dep.second)
+                    allocateOptimally(dep.first, dep.second)
                     takeResource(dep.first, dep.second)
                 }
             }
             addResource(chemical, ceiledAmount)
         }
-    }
-
-    fun modCeil(amount: Int, mod: Int): Int {
-        var i = mod
-        while (i < amount) {
-            i += mod
-        }
-        return i
     }
 
     private fun canTakeResource(chemical: String, amount: Int): Boolean {
@@ -67,19 +69,12 @@ class ChemicalResourceAllocator {
 }
 
 fun main() {
-    val lookup = lookup_3
-    val data = data_3
-
-    val allocator = ChemicalResourceAllocator(data, lookup)
-    allocator.allocateResources("FUEL", 1)
-    /*
-    println(allocator.modCeil(7, 12)) // 12
-    println(allocator.modCeil(13, 12)) // 24
-    println(allocator.modCeil(12, 12)) // 12
-     */
-
-    println(allocator.totalOreCount())
-    println(allocator.resources)
-    println(allocator.spentResources)
-    println("ore count: ${allocator.totalOreCount()}")
+    val helper = ChemicalHelper(data_1, lookup_1)
+    println(helper.getReactionInputs("FUEL"))
+    println(helper.getReactionOutput("FUEL"))
+    // println(helper.getTotalChemicalContribution("A", "AB"))
+    // println(helper.getTotalChemicalContribution("A", "FUEL"))
+    // println(helper.getTotalChemicalContribution("B", "FUEL"))
+    println(helper.getTotalChemicalContribution("C", "FUEL"))
+    println(helper.getSubBaseChemicals())
 }

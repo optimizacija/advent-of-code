@@ -15,7 +15,7 @@ fun main() {
 
     program.run()
     println(renderer.tiles.size)
-    println(renderer.tiles.count { (key, value) -> value == TileId.Block })
+    println(renderer.tiles.count { (_, value) -> value == TileId.Block })
     /*
     val image = renderer.genImage()
     day11.print(image)

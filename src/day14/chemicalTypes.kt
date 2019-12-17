@@ -1,9 +1,10 @@
 package day14
 
 typealias Chemical = String
-typealias ChemicalAmount = Pair<Chemical, Int>
-typealias ChemicalComposition = List<ChemicalAmount>
-typealias ChemicalAmountLookup = Map<Chemical, ChemicalAmount>
-typealias ChemicalFormulaMap = Map<ChemicalAmount, ChemicalComposition>
+typealias ReactionOutput = Pair<Chemical, Int>
+typealias ReactionInput = ReactionOutput
+typealias ReactionInputs = List<ReactionInput>
+typealias ReactionOutputLookup = Map<Chemical, ReactionOutput>
+typealias ReactionInputsLookup = Map<ReactionOutput, ReactionInputs>
 
 
