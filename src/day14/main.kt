@@ -1,7 +1,9 @@
 package day14
 
 fun main() {
-    val helper = ChemicalCreator(data_4, lookup_4)
+    val data = data_4
+    val lookup = lookup_4
+    val helper = ChemicalCreator(data, lookup)
     println("----")
     println(helper.resources)
     println(helper.spentResources)
@@ -24,6 +26,7 @@ fun main() {
     helper.createChemical("FUEL")
     println(helper.resources)
     println(helper.spentResources)
+    println(helper.totalResources())
     println("----")
 
     /*

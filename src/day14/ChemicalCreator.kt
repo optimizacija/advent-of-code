@@ -7,10 +7,11 @@ class ChemicalCreator(var reactions: ReactionComponentLookup,
     var spentResources = getEmptyChemicalCache()
 
     fun createChemical(chemical: Chemical) {
-        createChemicalFromComponents(getReactionComponents(chemical))
+        consumeReactionComponents(getReactionComponents(chemical))
+        addResource(chemical, getReactionResultAmount(chemical))
     }
 
-    private fun createChemicalFromComponents(reactionComponents: ReactionComponents) {
+    private fun consumeReactionComponents(reactionComponents: ReactionComponents) {
         reactionComponents.forEach(fun (it) {
             val (chemical, amount) = it
 
@@ -25,13 +26,12 @@ class ChemicalCreator(var reactions: ReactionComponentLookup,
         if (isOre(chemical)) {
             addResource(chemical, requiredAmount)
         } else {
-            val singleReactionProducedAmount = getReactionResultAmount(chemical)
-            val producedAmount = requiredAmount.raisedToModBase(singleReactionProducedAmount)
-            val reactionCount =  producedAmount/ singleReactionProducedAmount
+            val reactionProducedAmount = getReactionResultAmount(chemical)
+            val producedAmount = requiredAmount.raisedToModBase(reactionProducedAmount)
+            val reactionCount =  producedAmount / reactionProducedAmount
             for(i in 0 until reactionCount) {
                 createChemical(chemical)
             }
-            addResource(chemical, producedAmount)
         }
     }
 
@@ -101,5 +101,9 @@ class ChemicalCreator(var reactions: ReactionComponentLookup,
         val cache = reactions.flatMap{ it.value }.distinct().map{ Pair(it.first, 0)}.toMap().toMutableMap()
         reactions.forEach{cache[it.key.first] = 0} // basically only add FUEL
         return cache
+    }
+
+    fun totalResources(): MutableMap<Chemical, Int> {
+        return resources.map{ Pair(it.key, it.value + spentResources[it.key]!!)}.toMap().toMutableMap()
     }
 }
