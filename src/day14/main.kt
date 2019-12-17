@@ -1,76 +1,31 @@
 package day14
 
-class Temp {
-    private val data: ReactionInputsLookup
-    private val lookup: ReactionOutputLookup
-    var resources: MutableMap<Chemical, Int>
-    var spentResources: MutableMap<Chemical, Int>
-
-    constructor(data: ReactionInputsLookup, lookup: ReactionOutputLookup) {
-        this.data = data
-        this.lookup = lookup
-
-        resources = lookup.map { Pair(it.key, 0) }.toMap().toMutableMap()
-        spentResources = lookup.map { Pair(it.key, 0) }.toMap().toMutableMap()
-        resources["ORE"] = 0
-        spentResources["ORE"] = 0
-    }
-
-    fun allocateOptimally(chemical: String, amount: Int) {
-        // resources are shared by every chemical
-        // TODO: WIP
-        if (canTakeResource(chemical, amount)) {
-            takeResource(chemical, amount)
-        } else if (chemical == "ORE") {
-            addResource(chemical, amount)
-        } else {
-            val chemicalAmount = lookup[chemical]!!
-            val prodAmount = chemicalAmount.second
-            val ceiledAmount = amount.raisedToModBase(prodAmount)
-            val prodCount = ceiledAmount / prodAmount
-            for (i in 0 until prodCount) {
-                val deps = data[chemicalAmount]!!
-                for (dep in deps) {
-                    allocateOptimally(dep.first, dep.second)
-                    takeResource(dep.first, dep.second)
-                }
-            }
-            addResource(chemical, ceiledAmount)
-        }
-    }
-
-    private fun canTakeResource(chemical: String, amount: Int): Boolean {
-        return resources[chemical]!! >= amount
-    }
-
-    private fun takeResource(chemical: String, amount: Int) {
-        println("removed $amount $chemical")
-        resources[chemical] = resources[chemical]!! - amount
-        spentResources[chemical] = spentResources[chemical]!! + amount
-    }
-
-    private fun addResource(chemical: String, amount: Int) {
-        println("added $amount $chemical")
-        resources[chemical] = resources[chemical]!! + amount
-    }
-
-    fun totalOreCount(): Int {
-        return resources["ORE"]!! + spentResources["ORE"]!!
-    }
-
-}
-
 fun main() {
-    val helper = ChemicalResourceAllocator(data_1, lookup_1)
-    println(data_1)
+    val helper = ChemicalCreator(data_4, lookup_4)
+    println("----")
+    println(helper.resources)
+    println(helper.spentResources)
+    println("----")
+
+    println("ores: ${helper.getOres()}")
+    println(helper.getBaseChemicals())
+
+    // helper.makeOresDistinct()
+
+    println("----")
+    println(helper.resources)
+    println(helper.spentResources)
+    println("----")
+
     println(helper.getOres())
     println(helper.getBaseChemicals())
 
-    println(helper.makeOresDistinct())
+    println("----")
+    helper.createChemical("FUEL")
+    println(helper.resources)
+    println(helper.spentResources)
+    println("----")
 
-    println(data_1)
-    println(helper.getOres())
-    println(helper.getBaseChemicals())
     /*
     val subBaseChemicals = helper.getBaseChemicals()
     val chemicalDist = subBaseChemicals.map{ Pair(it, helper.getTotalRequiredChemicals(it, "FUEL").raisedToModBase(helper.getReactionResult(it).second))}

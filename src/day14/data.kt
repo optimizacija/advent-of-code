@@ -1,5 +1,133 @@
 package day14
 
+val lookup_0 = mutableMapOf(
+    Pair("PMVMQ", Pair("PMVMQ", 3)),
+    Pair("BTQL", Pair("BTQL", 4)),
+    Pair("HDJB", Pair("HDJB", 5)),
+    Pair("BGPF", Pair("BGPF", 7)),
+    Pair("QHFKR", Pair("QHFKR", 3)),
+    Pair("TPXCK", Pair("TPXCK", 1)),
+    Pair("XFGH", Pair("XFGH", 4)),
+    Pair("GRNC", Pair("GRNC", 4)),
+    Pair("GRDNT", Pair("GRDNT", 1)),
+    Pair("LCHZ", Pair("LCHZ", 5)),
+    Pair("LWDP", Pair("LWDP", 9)),
+    Pair("RQFRT", Pair("RQFRT", 5)),
+    Pair("SDLJ", Pair("SDLJ", 6)),
+    Pair("GCZLZ", Pair("GCZLZ", 1)),
+    Pair("FBRG", Pair("FBRG", 1)),
+    Pair("WXGV", Pair("WXGV", 5)),
+    Pair("WDXT", Pair("WDXT", 6)),
+    Pair("FCNPB", Pair("FCNPB", 5)),
+    Pair("KLRB", Pair("KLRB", 9)),
+    Pair("GLZH", Pair("GLZH", 4)),
+    Pair("SVDX", Pair("SVDX", 5)),
+    Pair("LHFV", Pair("LHFV", 7)),
+    Pair("RSZF", Pair("RSZF", 3)),
+    Pair("TSGR", Pair("TSGR", 6)),
+    Pair("NKHSG", Pair("NKHSG", 5)),
+    Pair("GDXC", Pair("GDXC", 9)),
+    Pair("SKZGB", Pair("SKZGB", 8)),
+    Pair("QZVM", Pair("QZVM", 8)),
+    Pair("FUEL", Pair("FUEL", 1)),
+    Pair("PXKHG", Pair("PXKHG", 1)),
+    Pair("VTDQ", Pair("VTDQ", 8)),
+    Pair("FCPC", Pair("FCPC", 1)),
+    Pair("FWGTF", Pair("FWGTF", 8)),
+    Pair("WPZN", Pair("WPZN", 3)),
+    Pair("HWKG", Pair("HWKG", 6)),
+    Pair("XZBJ", Pair("XZBJ", 4)),
+    Pair("CTDRZ", Pair("CTDRZ", 9)),
+    Pair("JTJT", Pair("JTJT", 7)),
+    Pair("BGNLR", Pair("BGNLR", 3)),
+    Pair("HTFL", Pair("HTFL", 4)),
+    Pair("XFGQ", Pair("XFGQ", 6)),
+    Pair("LXQWG", Pair("LXQWG", 8)),
+    Pair("JBXDX", Pair("JBXDX", 9)),
+    Pair("RLNF", Pair("RLNF", 8)),
+    Pair("WNSW", Pair("WNSW", 3)),
+    Pair("SCDS", Pair("SCDS", 2)),
+    Pair("GMRN", Pair("GMRN", 3)),
+    Pair("KBCW", Pair("KBCW", 8)),
+    Pair("PSVLS", Pair("PSVLS", 4)),
+    Pair("MZTVH", Pair("MZTVH", 9)),
+    Pair("HRCG", Pair("HRCG", 5)),
+    Pair("PZPBV", Pair("PZPBV", 3)),
+    Pair("PLCNZ", Pair("PLCNZ", 9)),
+    Pair("ZXNM", Pair("ZXNM", 6)),
+    Pair("TCQW", Pair("TCQW", 8)),
+    Pair("NRFLK", Pair("NRFLK", 4)),
+    Pair("VHJX", Pair("VHJX", 3)),
+    Pair("LSNG", Pair("LSNG", 7)),
+    Pair("ZGWT", Pair("ZGWT", 5)),
+    Pair("MHRVG", Pair("MHRVG", 6)),
+    Pair("LHVTN", Pair("LHVTN", 5))
+)
+
+val data_0 = mutableMapOf(
+    Pair(Pair("PMVMQ", 3), listOf(Pair("LHFV", 8))),
+    Pair(Pair("BTQL", 4), listOf(Pair("ZXNM", 2), Pair("PSVLS", 1), Pair("GRDNT", 4), Pair("GLZH", 26), Pair("VHJX", 3), Pair("BGPF", 16), Pair("LHVTN", 1))),
+    Pair(Pair("HDJB", 5), listOf(Pair("NKHSG", 10), Pair("FCPC", 20), Pair("GRDNT", 11))),
+    Pair(Pair("BGPF", 7), listOf(Pair("WPZN", 6), Pair("LHFV", 1))),
+    Pair(Pair("QHFKR", 3), listOf(Pair("WDXT", 1), Pair("PLCNZ", 1))),
+    Pair(Pair("TPXCK", 1), listOf(Pair("LCHZ", 12))),
+    Pair(Pair("XFGH", 4), listOf(Pair("LSNG", 11))),
+    Pair(Pair("GRNC", 4), listOf(Pair("ORE", 195))),
+    Pair(Pair("GRDNT", 1), listOf(Pair("XFGQ", 8))),
+    Pair(Pair("LCHZ", 5), listOf(Pair("FBRG", 1))),
+    Pair(Pair("LWDP", 9), listOf(Pair("XZBJ", 7), Pair("RSZF", 8), Pair("SVDX", 9))),
+    Pair(Pair("RQFRT", 5), listOf(Pair("WDXT", 20))),
+    Pair(Pair("SDLJ", 6), listOf(Pair("LXQWG", 1), Pair("GLZH", 1))),
+    Pair(Pair("GCZLZ", 1), listOf(Pair("XFGH", 4))),
+    Pair(Pair("FBRG", 1), listOf(Pair("WPZN", 1))),
+    Pair(Pair("WXGV", 5), listOf(Pair("XZBJ", 19))),
+    Pair(Pair("WDXT", 6), listOf(Pair("GDXC", 1))),
+    Pair(Pair("FCNPB", 5), listOf(Pair("WXGV", 1), Pair("NKHSG", 1), Pair("LWDP", 2))),
+    Pair(Pair("KLRB", 9), listOf(Pair("LWDP", 4), Pair("BGPF", 5))),
+    Pair(Pair("GLZH", 4), listOf(Pair("GMRN", 1))),
+    Pair(Pair("SVDX", 5), listOf(Pair("RQFRT", 1))),
+    Pair(Pair("LHFV", 7), listOf(Pair("HWKG", 2))),
+    Pair(Pair("RSZF", 3), listOf(Pair("LCHZ", 2), Pair("JTJT", 13), Pair("TPXCK", 10))),
+    Pair(Pair("TSGR", 6), listOf(Pair("MZTVH", 29))),
+    Pair(Pair("NKHSG", 5), listOf(Pair("NRFLK", 9), Pair("SVDX", 1))),
+    Pair(Pair("GDXC", 9), listOf(Pair("ORE", 123))),
+    Pair(Pair("SKZGB", 8), listOf(Pair("PZPBV", 1), Pair("PMVMQ", 21), Pair("GCZLZ", 1))),
+    Pair(Pair("QZVM", 8), listOf(Pair("GRNC", 3), Pair("GDXC", 5))),
+    Pair(Pair("FUEL", 1), listOf(Pair("VTDQ", 6), Pair("TCQW", 13), Pair("FCNPB", 3), Pair("PSVLS", 48), Pair("RLNF", 3), Pair("BTQL", 73), Pair("MHRVG", 5), Pair("BGPF", 26), Pair("HDJB", 26), Pair("XFGQ", 5), Pair("HTFL", 6))),
+    Pair(Pair("PXKHG", 1), listOf(Pair("QZVM", 5), Pair("JTJT", 2))),
+    Pair(Pair("VTDQ", 8), listOf(Pair("LSNG", 3), Pair("PMVMQ", 1))),
+    Pair(Pair("FCPC", 1), listOf(Pair("XFGH", 31))),
+    Pair(Pair("FWGTF", 8), listOf(Pair("PSVLS", 9))),
+    Pair(Pair("WPZN", 3), listOf(Pair("GRNC", 1))),
+    Pair(Pair("HWKG", 6), listOf(Pair("JBXDX", 16), Pair("GRNC", 4))),
+    Pair(Pair("XZBJ", 4), listOf(Pair("SKZGB", 1), Pair("RSZF", 5))),
+    Pair(Pair("CTDRZ", 9), listOf(Pair("ORE", 134))),
+    Pair(Pair("JTJT", 7), listOf(Pair("SVDX", 1), Pair("TPXCK", 2))),
+    Pair(Pair("BGNLR", 3), listOf(Pair("RQFRT", 6), Pair("KBCW", 4))),
+    Pair(Pair("HTFL", 4), listOf(Pair("KLRB", 12), Pair("LHFV", 12))),
+    Pair(Pair("XFGQ", 6), listOf(Pair("GMRN", 2))),
+    Pair(Pair("LXQWG", 8), listOf(Pair("WNSW", 16), Pair("SKZGB", 12))),
+    Pair(Pair("JBXDX", 9), listOf(Pair("NRFLK", 2), Pair("CTDRZ", 2))),
+    Pair(Pair("RLNF", 8), listOf(Pair("PZPBV", 1))),
+    Pair(Pair("WNSW", 3), listOf(Pair("JTJT", 2), Pair("GCZLZ", 5))),
+    Pair(Pair("SCDS", 2), listOf(Pair("WXGV", 5), Pair("LCHZ", 2))),
+    Pair(Pair("GMRN", 3), listOf(Pair("QHFKR", 1))),
+    Pair(Pair("KBCW", 8), listOf(Pair("JTJT", 10), Pair("HRCG", 2))),
+    Pair(Pair("PSVLS", 4), listOf(Pair("HWKG", 7))),
+    Pair(Pair("MZTVH", 9), listOf(Pair("WNSW", 7), Pair("PXKHG", 1), Pair("BGNLR", 3))),
+    Pair(Pair("HRCG", 5), listOf(Pair("TPXCK", 15), Pair("LHFV", 11))),
+    Pair(Pair("PZPBV", 3), listOf(Pair("LSNG", 1), Pair("HWKG", 1))),
+    Pair(Pair("PLCNZ", 9), listOf(Pair("BGPF", 7))),
+    Pair(Pair("ZXNM", 6), listOf(Pair("ZGWT", 1))),
+    Pair(Pair("TCQW", 8), listOf(Pair("NKHSG", 26), Pair("LHFV", 1), Pair("JTJT", 2), Pair("WXGV", 26), Pair("SDLJ", 6), Pair("KLRB", 1), Pair("TSGR", 1))),
+    Pair(Pair("NRFLK", 4), listOf(Pair("ORE", 154))),
+    Pair(Pair("VHJX", 3), listOf(Pair("GMRN", 1))),
+    Pair(Pair("LSNG", 7), listOf(Pair("QZVM", 5), Pair("GDXC", 3))),
+    Pair(Pair("ZGWT", 5), listOf(Pair("WNSW", 5))),
+    Pair(Pair("MHRVG", 6), listOf(Pair("QHFKR", 6), Pair("PZPBV", 8), Pair("FBRG", 10), Pair("FWGTF", 13), Pair("LHVTN", 1), Pair("SCDS", 4), Pair("VHJX", 8), Pair("TSGR", 7))),
+    Pair(Pair("LHVTN", 5), listOf(Pair("GLZH", 12)))
+)
+
 val lookup_1 = mutableMapOf(
     Pair("A", Pair("A", 10)),
     Pair("B", Pair("B", 1)),
@@ -17,7 +145,6 @@ val data_1 = mutableMapOf(
     Pair(Pair("E", 1), listOf(Pair("A", 7), Pair("D", 1))),
     Pair(Pair("FUEL", 1), listOf(Pair("A", 7), Pair("E", 1)))
 )
-
 
 val lookup_2 = mutableMapOf(
     Pair("A", Pair("A", 2)),
@@ -39,6 +166,29 @@ val data_2 = mutableMapOf(
     Pair(Pair("FUEL", 1), listOf(Pair("AB", 2), Pair("BC", 3), Pair("CA", 4)))
 )
 
+val lookup_4 = mutableMapOf(
+    Pair("NZVS", Pair("NZVS", 5)),
+    Pair("DCFZ", Pair("DCFZ", 6)),
+    Pair("FUEL", Pair("FUEL", 1)),
+    Pair("QDVJ", Pair("QDVJ", 9)),
+    Pair("PSHF", Pair("PSHF", 7)),
+    Pair("HKGWZ", Pair("HKGWZ", 5)),
+    Pair("XJWVT", Pair("XJWVT", 2)),
+    Pair("GPVTF", Pair("GPVTF", 2)),
+    Pair("KHKGT", Pair("KHKGT", 8))
+)
+
+val data_4 = mutableMapOf(
+    Pair(Pair("NZVS", 5), listOf(Pair("ORE", 157))),
+    Pair(Pair("DCFZ", 6), listOf(Pair("ORE", 165))),
+    Pair(Pair("FUEL", 1), listOf(Pair("XJWVT", 44), Pair("KHKGT", 5), Pair("QDVJ", 1), Pair("NZVS", 29), Pair("GPVTF", 9), Pair("HKGWZ", 48))),
+    Pair(Pair("QDVJ", 9), listOf(Pair("HKGWZ", 12), Pair("GPVTF", 1), Pair("PSHF", 8))),
+    Pair(Pair("PSHF", 7), listOf(Pair("ORE", 179))),
+    Pair(Pair("HKGWZ", 5), listOf(Pair("ORE", 177))),
+    Pair(Pair("XJWVT", 2), listOf(Pair("DCFZ", 7), Pair("PSHF", 7))),
+    Pair(Pair("GPVTF", 2), listOf(Pair("ORE", 165))),
+    Pair(Pair("KHKGT", 8), listOf(Pair("DCFZ", 3), Pair("NZVS", 7), Pair("HKGWZ", 5), Pair("PSHF", 10)))
+)
 
 
 val lookup_5 = mutableMapOf(
@@ -63,55 +213,13 @@ val lookup_5 = mutableMapOf(
 
 val data_5 = mutableMapOf(
     Pair(Pair("CNZTR", 8), listOf(Pair("ORE", 171))),
-    Pair(
-        Pair("PLWSL", 4),
-        listOf(
-            Pair("ZLQW", 7),
-            Pair("BMBT", 3),
-            Pair("XCVML", 9),
-            Pair("XMNCP", 26),
-            Pair("WPTQ", 1),
-            Pair("MZWV", 2),
-            Pair("RJRHP", 1)
-        )
-    ),
+    Pair(Pair("PLWSL", 4), listOf(Pair("ZLQW", 7),Pair("BMBT", 3),Pair("XCVML", 9),Pair("XMNCP", 26),Pair("WPTQ", 1),Pair("MZWV", 2),Pair("RJRHP", 1))),
     Pair(Pair("BHXH", 4), listOf(Pair("ORE", 114))),
     Pair(Pair("BMBT", 6), listOf(Pair("VRPVC", 14))),
-    Pair(
-        Pair("FUEL", 1),
-        listOf(
-            Pair("BHXH", 6),
-            Pair("KTJDG", 18),
-            Pair("WPTQ", 12),
-            Pair("PLWSL", 7),
-            Pair("FHTLT", 31),
-            Pair("ZDVW", 37)
-        )
-    ),
-    Pair(
-        Pair("FHTLT", 6),
-        listOf(
-            Pair("WPTQ", 6),
-            Pair("BMBT", 2),
-            Pair("ZLQW", 8),
-            Pair("KTJDG", 18),
-            Pair("XMNCP", 1),
-            Pair("MZWV", 6),
-            Pair("RJRHP", 1)
-        )
-    ),
+    Pair(Pair("FUEL", 1),listOf(Pair("BHXH", 6),Pair("KTJDG", 18),Pair("WPTQ", 12),Pair("PLWSL", 7),Pair("FHTLT", 31),Pair("ZDVW", 37))),
+    Pair(Pair("FHTLT", 6),listOf(Pair("WPTQ", 6),Pair("BMBT", 2),Pair("ZLQW", 8),Pair("KTJDG", 18),Pair("XMNCP", 1),Pair("MZWV", 6),Pair("RJRHP", 1))),
     Pair(Pair("ZLQW", 6), listOf(Pair("XDBXC", 15), Pair("LTCX", 2), Pair("VRPVC", 1))),
-    Pair(
-        Pair("ZDVW", 1),
-        listOf(
-            Pair("WPTQ", 13),
-            Pair("LTCX", 10),
-            Pair("RJRHP", 3),
-            Pair("XMNCP", 14),
-            Pair("MZWV", 2),
-            Pair("ZLQW", 1)
-        )
-    ),
+    Pair(Pair("ZDVW", 1),listOf(Pair("WPTQ", 13),Pair("LTCX", 10),Pair("RJRHP", 3),Pair("XMNCP", 14),Pair("MZWV", 2),Pair("ZLQW", 1))),
     Pair(Pair("WPTQ", 4), listOf(Pair("BMBT", 5))),
     Pair(Pair("KTJDG", 9), listOf(Pair("ORE", 189))),
     Pair(Pair("XMNCP", 2), listOf(Pair("MZWV", 1), Pair("XDBXC", 17), Pair("XCVML", 3))),

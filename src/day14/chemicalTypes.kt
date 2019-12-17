@@ -2,9 +2,9 @@ package day14
 
 typealias Chemical = String
 typealias ReactionResult = Pair<Chemical, Int>
-typealias ReactionInput = ReactionResult
-typealias ReactionComponents = List<ReactionInput>
-typealias ReactionOutputLookup = MutableMap<Chemical, ReactionResult>
-typealias ReactionInputsLookup = MutableMap<ReactionResult, ReactionComponents>
+typealias ReactionComponent = ReactionResult
+typealias ReactionComponents = List<ReactionComponent>
+typealias ReactionResultLookup = MutableMap<Chemical, ReactionResult>
+typealias ReactionComponentLookup = MutableMap<ReactionResult, ReactionComponents>
 
 
