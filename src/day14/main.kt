@@ -1,14 +1,6 @@
 package day14
 
-fun modCeil(amount: Int, mod: Int): Int {
-    var i = mod
-    while (i < amount) {
-        i += mod
-    }
-    return i
-}
-
-class ChemicalResourceAllocator {
+class Temp {
     private val data: ReactionInputsLookup
     private val lookup: ReactionOutputLookup
     var resources: MutableMap<Chemical, Int>
@@ -34,7 +26,7 @@ class ChemicalResourceAllocator {
         } else {
             val chemicalAmount = lookup[chemical]!!
             val prodAmount = chemicalAmount.second
-            val ceiledAmount = modCeil(amount, prodAmount)
+            val ceiledAmount = amount.raisedToModBase(prodAmount)
             val prodCount = ceiledAmount / prodAmount
             for (i in 0 until prodCount) {
                 val deps = data[chemicalAmount]!!
@@ -69,12 +61,23 @@ class ChemicalResourceAllocator {
 }
 
 fun main() {
-    val helper = ChemicalHelper(data_1, lookup_1)
-    println(helper.getReactionInputs("FUEL"))
-    println(helper.getReactionOutput("FUEL"))
-    // println(helper.getTotalChemicalContribution("A", "AB"))
-    // println(helper.getTotalChemicalContribution("A", "FUEL"))
-    // println(helper.getTotalChemicalContribution("B", "FUEL"))
-    println(helper.getTotalChemicalContribution("C", "FUEL"))
-    println(helper.getSubBaseChemicals())
+    val helper = ChemicalResourceAllocator(data_1, lookup_1)
+    println(data_1)
+    println(helper.getOres())
+    println(helper.getBaseChemicals())
+
+    println(helper.makeOresDistinct())
+
+    println(data_1)
+    println(helper.getOres())
+    println(helper.getBaseChemicals())
+    /*
+    val subBaseChemicals = helper.getBaseChemicals()
+    val chemicalDist = subBaseChemicals.map{ Pair(it, helper.getTotalRequiredChemicals(it, "FUEL").raisedToModBase(helper.getReactionResult(it).second))}
+    val reactionCounts = chemicalDist.map{ Pair(it.first, it.second / helper.getReactionResult(it.first).second )}
+    val oreDist = reactionCounts.map{helper.getReactionComponents(it.first)!!.first().second * it.second}
+    println(chemicalDist)
+    println(oreDist)
+    println(oreDist.sum())
+     */
 }

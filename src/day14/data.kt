@@ -1,6 +1,25 @@
 package day14
 
-val lookup_1 = mapOf(
+val lookup_1 = mutableMapOf(
+    Pair("A", Pair("A", 10)),
+    Pair("B", Pair("B", 1)),
+    Pair("C", Pair("C", 1)),
+    Pair("D", Pair("D", 1)),
+    Pair("E", Pair("E", 1)),
+    Pair("FUEL", Pair("FUEL", 1))
+)
+
+val data_1 = mutableMapOf(
+    Pair(Pair("A", 10), listOf(Pair("ORE", 10))),
+    Pair(Pair("B", 1), listOf(Pair("ORE", 1))),
+    Pair(Pair("C", 1), listOf(Pair("A", 7), Pair("B", 1))),
+    Pair(Pair("D", 1), listOf(Pair("A", 7), Pair("C", 1))),
+    Pair(Pair("E", 1), listOf(Pair("A", 7), Pair("D", 1))),
+    Pair(Pair("FUEL", 1), listOf(Pair("A", 7), Pair("E", 1)))
+)
+
+
+val lookup_2 = mutableMapOf(
     Pair("A", Pair("A", 2)),
     Pair("B", Pair("B", 3)),
     Pair("C", Pair("C", 5)),
@@ -10,7 +29,7 @@ val lookup_1 = mapOf(
     Pair("FUEL", Pair("FUEL", 1))
 )
 
-val data_1 = mapOf(
+val data_2 = mutableMapOf(
     Pair(Pair("A", 2), listOf(Pair("ORE", 9))),
     Pair(Pair("B", 3), listOf(Pair("ORE", 8))),
     Pair(Pair("C", 5), listOf(Pair("ORE", 7))),
@@ -20,7 +39,9 @@ val data_1 = mapOf(
     Pair(Pair("FUEL", 1), listOf(Pair("AB", 2), Pair("BC", 3), Pair("CA", 4)))
 )
 
-val lookup_2 = mapOf(
+
+
+val lookup_5 = mutableMapOf(
     Pair("CNZTR", Pair("CNZTR", 8)),
     Pair("PLWSL", Pair("PLWSL", 4)),
     Pair("BHXH", Pair("BHXH", 4)),
@@ -40,7 +61,7 @@ val lookup_2 = mapOf(
     Pair("LTCX", Pair("LTCX", 5))
 )
 
-val data_2 = mapOf(
+val data_5 = mutableMapOf(
     Pair(Pair("CNZTR", 8), listOf(Pair("ORE", 171))),
     Pair(
         Pair("PLWSL", 4),
@@ -100,38 +121,4 @@ val data_2 = mapOf(
     Pair(Pair("VRPVC", 7), listOf(Pair("ORE", 121))),
     Pair(Pair("RJRHP", 6), listOf(Pair("XCVML", 7))),
     Pair(Pair("LTCX", 5), listOf(Pair("BHXH", 5), Pair("VRPVC", 4)))
-)
-
-val lookup_3 = mapOf(
-    Pair("A", Pair("A", 10)),
-    Pair("B", Pair("B", 1)),
-    Pair("C", Pair("C", 1)),
-    Pair("D", Pair("D", 1)),
-    Pair("E", Pair("E", 1)),
-    Pair("FUEL", Pair("FUEL", 1))
-)
-
-val data_3 = mapOf(
-    Pair(Pair("A", 10), listOf(Pair("ORE", 10))),
-    Pair(Pair("B", 1), listOf(Pair("ORE", 1))),
-    Pair(Pair("C", 1), listOf(Pair("A", 7), Pair("B", 1))),
-    Pair(Pair("D", 1), listOf(Pair("A", 7), Pair("C", 1))),
-    Pair(Pair("E", 1), listOf(Pair("A", 7), Pair("D", 1))),
-    Pair(Pair("FUEL", 1), listOf(Pair("A", 7), Pair("E", 1)))
-)
-
-
-
-val lookup_4 = mapOf(
-    Pair("A", Pair("A", 10)),
-    Pair("B", Pair("B", 1)),
-    Pair("C", Pair("C", 1)),
-    Pair("FUEL", Pair("FUEL", 1))
-)
-
-val data_4 = mapOf(
-    Pair(Pair("A", 10), listOf(Pair("ORE", 10))),
-    Pair(Pair("B", 1), listOf(Pair("ORE", 1))),
-    Pair(Pair("C", 1), listOf(Pair("A", 7), Pair("B", 1))),
-    Pair(Pair("FUEL", 1), listOf(Pair("A", 7), Pair("C", 1)))
 )
