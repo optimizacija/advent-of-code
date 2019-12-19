@@ -1,8 +1,8 @@
 package day14
 
 fun main() {
-    val data = data_4
-    val lookup = lookup_4
+    val data = data_0
+    val lookup = lookup_0
     val helper = ChemicalCreator(data, lookup)
     println("----")
     println(helper.resources)
@@ -27,15 +27,6 @@ fun main() {
     println(helper.resources)
     println(helper.spentResources)
     println(helper.totalResources())
+    println(helper.totalResources()["ORE"])
     println("----")
-
-    /*
-    val subBaseChemicals = helper.getBaseChemicals()
-    val chemicalDist = subBaseChemicals.map{ Pair(it, helper.getTotalRequiredChemicals(it, "FUEL").raisedToModBase(helper.getReactionResult(it).second))}
-    val reactionCounts = chemicalDist.map{ Pair(it.first, it.second / helper.getReactionResult(it.first).second )}
-    val oreDist = reactionCounts.map{helper.getReactionComponents(it.first)!!.first().second * it.second}
-    println(chemicalDist)
-    println(oreDist)
-    println(oreDist.sum())
-     */
 }

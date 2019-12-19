@@ -26,8 +26,9 @@ class ChemicalCreator(var reactions: ReactionComponentLookup,
         if (isOre(chemical)) {
             addResource(chemical, requiredAmount)
         } else {
+            val missingAmount = requiredAmount - resources[chemical]!!
             val reactionProducedAmount = getReactionResultAmount(chemical)
-            val producedAmount = requiredAmount.raisedToModBase(reactionProducedAmount)
+            val producedAmount = missingAmount.raisedToModBase(reactionProducedAmount)
             val reactionCount =  producedAmount / reactionProducedAmount
             for(i in 0 until reactionCount) {
                 createChemical(chemical)
