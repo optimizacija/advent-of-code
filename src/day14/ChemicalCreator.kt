@@ -1,7 +1,7 @@
 package day14
 
-class ChemicalCreator(var reactions: ReactionComponentLookup,
-                      var chemicalResultLookup: ReactionResultLookup) {
+class ChemicalCreator(val reactions: ReactionComponentLookup,
+                      val chemicalResultLookup: ReactionResultLookup) {
 
     var resources = getEmptyChemicalCache()
     var spentResources = getEmptyChemicalCache()
@@ -22,7 +22,7 @@ class ChemicalCreator(var reactions: ReactionComponentLookup,
         })
     }
 
-    private fun stockChemical(chemical: Chemical, requiredAmount: Long) {
+    fun stockChemical(chemical: Chemical, requiredAmount: Long) {
         if (isOre(chemical)) {
             addResource(chemical, requiredAmount)
         } else {
@@ -42,7 +42,7 @@ class ChemicalCreator(var reactions: ReactionComponentLookup,
 
     private fun takeResource(chemical: Chemical, amount: Long) {
         // take resources
-        resources[chemical] = resources[chemical]!! - amount
+        resources[chemical] = resources[chemical]!!- amount
         // write change to history
         spentResources[chemical] = spentResources[chemical]!! + amount
     }
@@ -63,13 +63,8 @@ class ChemicalCreator(var reactions: ReactionComponentLookup,
         return getReactionResult(chemical).second
     }
 
-    fun getOres(): List<Chemical> {
-        val allChemicals = reactions.flatMap { it.value }.map{it.first}
-        return allChemicals.filter{isOre(it)}.distinct()
-    }
-
     fun isOre(chemical: Chemical): Boolean {
-        return !chemicalResultLookup.contains(chemical)
+        return chemical == "ORE"
     }
 
     private fun getEmptyChemicalCache(): MutableMap<Chemical, Long> {

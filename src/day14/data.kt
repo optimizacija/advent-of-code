@@ -1,6 +1,6 @@
 package day14
 
-val lookup_0 = mutableMapOf(
+val lookup_0 = mapOf(
     Pair("PMVMQ", Pair("PMVMQ", 3L)),
     Pair("BTQL", Pair("BTQL", 4L)),
     Pair("HDJB", Pair("HDJB", 5L)),
@@ -64,7 +64,7 @@ val lookup_0 = mutableMapOf(
     Pair("LHVTN", Pair("LHVTN", 5L))
 )
 
-val data_0 = mutableMapOf(
+val data_0 = mapOf(
     Pair(Pair("PMVMQ", 3L), listOf(Pair("LHFV", 8L))),
     Pair(Pair("BTQL", 4L), listOf(Pair("ZXNM", 2L), Pair("PSVLS", 1L), Pair("GRDNT", 4L), Pair("GLZH", 26L), Pair("VHJX", 3L), Pair("BGPF", 16L), Pair("LHVTN", 1L))),
     Pair(Pair("HDJB", 5L), listOf(Pair("NKHSG", 10L), Pair("FCPC", 20L), Pair("GRDNT", 11L))),
@@ -128,7 +128,7 @@ val data_0 = mutableMapOf(
     Pair(Pair("LHVTN", 5L), listOf(Pair("GLZH", 12L)))
 )
 
-val lookup_1 = mutableMapOf(
+val lookup_1 = mapOf(
     Pair("A", Pair("A", 10L)),
     Pair("B", Pair("B", 1L)),
     Pair("C", Pair("C", 1L)),
@@ -137,7 +137,7 @@ val lookup_1 = mutableMapOf(
     Pair("FUEL", Pair("FUEL", 1L))
 )
 
-val data_1 = mutableMapOf(
+val data_1 = mapOf(
     Pair(Pair("A", 10L), listOf(Pair("ORE", 10L))),
     Pair(Pair("B", 1L), listOf(Pair("ORE", 1L))),
     Pair(Pair("C", 1L), listOf(Pair("A", 7L), Pair("B", 1L))),
@@ -146,7 +146,7 @@ val data_1 = mutableMapOf(
     Pair(Pair("FUEL", 1L), listOf(Pair("A", 7L), Pair("E", 1L)))
 )
 
-val lookup_2 = mutableMapOf(
+val lookup_2 = mapOf(
     Pair("A", Pair("A", 2L)),
     Pair("B", Pair("B", 3L)),
     Pair("C", Pair("C", 5L)),
@@ -156,7 +156,7 @@ val lookup_2 = mutableMapOf(
     Pair("FUEL", Pair("FUEL", 1L))
 )
 
-val data_2 = mutableMapOf(
+val data_2 = mapOf(
     Pair(Pair("A", 2L), listOf(Pair("ORE", 9L))),
     Pair(Pair("B", 3L), listOf(Pair("ORE", 8L))),
     Pair(Pair("C", 5L), listOf(Pair("ORE", 7L))),
@@ -166,7 +166,7 @@ val data_2 = mutableMapOf(
     Pair(Pair("FUEL", 1L), listOf(Pair("AB", 2L), Pair("BC", 3L), Pair("CA", 4L)))
 )
 
-val lookup_4 = mutableMapOf(
+val lookup_4 = mapOf(
     Pair("NZVS", Pair("NZVS", 5L)),
     Pair("DCFZ", Pair("DCFZ", 6L)),
     Pair("FUEL", Pair("FUEL", 1L)),
@@ -178,7 +178,7 @@ val lookup_4 = mutableMapOf(
     Pair("KHKGT", Pair("KHKGT", 8L))
 )
 
-val data_4 = mutableMapOf(
+val data_4 = mapOf(
     Pair(Pair("NZVS", 5L), listOf(Pair("ORE", 157L))),
     Pair(Pair("DCFZ", 6L), listOf(Pair("ORE", 165L))),
     Pair(Pair("FUEL", 1L), listOf(Pair("XJWVT", 44L), Pair("KHKGT", 5L), Pair("QDVJ", 1L), Pair("NZVS", 29L), Pair("GPVTF", 9L), Pair("HKGWZ", 48L))),
@@ -191,7 +191,7 @@ val data_4 = mutableMapOf(
 )
 
 
-val lookup_5 = mutableMapOf(
+val lookup_5 = mapOf(
     Pair("CNZTR", Pair("CNZTR", 8L)),
     Pair("PLWSL", Pair("PLWSL", 4L)),
     Pair("BHXH", Pair("BHXH", 4L)),
@@ -211,7 +211,7 @@ val lookup_5 = mutableMapOf(
     Pair("LTCX", Pair("LTCX", 5L))
 )
 
-val data_5 = mutableMapOf(
+val data_5 = mapOf(
     Pair(Pair("CNZTR", 8L), listOf(Pair("ORE", 171L))),
     Pair(Pair("PLWSL", 4L), listOf(Pair("ZLQW", 7L),Pair("BMBT", 3L),Pair("XCVML", 9L),Pair("XMNCP", 26L),Pair("WPTQ", 1L),Pair("MZWV", 2L),Pair("RJRHP", 1L))),
     Pair(Pair("BHXH", 4L), listOf(Pair("ORE", 114L))),
