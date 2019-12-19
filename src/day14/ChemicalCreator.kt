@@ -22,7 +22,7 @@ class ChemicalCreator(var reactions: ReactionComponentLookup,
         })
     }
 
-    private fun stockChemical(chemical: Chemical, requiredAmount: Int) {
+    private fun stockChemical(chemical: Chemical, requiredAmount: Long) {
         if (isOre(chemical)) {
             addResource(chemical, requiredAmount)
         } else {
@@ -30,24 +30,24 @@ class ChemicalCreator(var reactions: ReactionComponentLookup,
             val reactionProducedAmount = getReactionResultAmount(chemical)
             val producedAmount = missingAmount.raisedToModBase(reactionProducedAmount)
             val reactionCount =  producedAmount / reactionProducedAmount
-            for(i in 0 until reactionCount) {
+            for(i in 0L until reactionCount) {
                 createChemical(chemical)
             }
         }
     }
 
-    private fun addResource(chemical: Chemical, amount: Int) {
+    private fun addResource(chemical: Chemical, amount: Long) {
         resources[chemical] = (resources[chemical] ?: error("could not find chemical $chemical")) + amount
     }
 
-    private fun takeResource(chemical: Chemical, amount: Int) {
+    private fun takeResource(chemical: Chemical, amount: Long) {
         // take resources
         resources[chemical] = resources[chemical]!! - amount
         // write change to history
         spentResources[chemical] = spentResources[chemical]!! + amount
     }
 
-    private fun isChemicalStocked(chemical: Chemical, requiredAmount: Int): Boolean {
+    private fun isChemicalStocked(chemical: Chemical, requiredAmount: Long): Boolean {
         return resources[chemical]!! >= requiredAmount
     }
 
@@ -76,7 +76,7 @@ class ChemicalCreator(var reactions: ReactionComponentLookup,
         return chemicalResultLookup[chemical] ?: error("chemical output not found for $chemical")
     }
 
-    fun getReactionResultAmount(chemical: Chemical): Int {
+    fun getReactionResultAmount(chemical: Chemical): Long {
         return getReactionResult(chemical).second
     }
 
@@ -98,13 +98,13 @@ class ChemicalCreator(var reactions: ReactionComponentLookup,
         return components.size == 1 && components.any{isOre(it.first)}
     }
 
-    private fun getEmptyChemicalCache(): MutableMap<Chemical, Int> {
-        val cache = reactions.flatMap{ it.value }.distinct().map{ Pair(it.first, 0)}.toMap().toMutableMap()
-        reactions.forEach{cache[it.key.first] = 0} // basically only add FUEL
+    private fun getEmptyChemicalCache(): MutableMap<Chemical, Long> {
+        val cache = reactions.flatMap{ it.value }.distinct().map{ Pair(it.first, 0L)}.toMap().toMutableMap()
+        reactions.forEach{cache[it.key.first] = 0L} // basically only add FUEL
         return cache
     }
 
-    fun totalResources(): MutableMap<Chemical, Int> {
+    fun totalResources(): MutableMap<Chemical, Long> {
         return resources.map{ Pair(it.key, it.value + spentResources[it.key]!!)}.toMap().toMutableMap()
     }
 }

@@ -8,3 +8,11 @@ fun Int.raisedToModBase(mod: Int): Int {
     return i
 }
 
+
+fun Long.raisedToModBase(mod: Long): Long {
+    var i = mod
+    while (i < this) {
+        i += mod
+    }
+    return i
+}
