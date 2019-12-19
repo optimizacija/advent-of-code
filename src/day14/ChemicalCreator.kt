@@ -51,23 +51,6 @@ class ChemicalCreator(var reactions: ReactionComponentLookup,
         return resources[chemical]!! >= requiredAmount
     }
 
-    fun makeOresDistinct() {
-        // A, B
-        val chemicals = getBaseChemicals()
-        // (A, A_ORE), (B, B_ORE)
-        val chemicalOres = chemicals.map{Pair(it, it + "_ORE")}
-
-        chemicalOres.forEach{
-            // (A, 9)
-            val reactionResult = getReactionResult(it.first)
-            // ((A, 9), [(ORE, 10)]) = ((A, 9), [(A_ORE, 10)]
-            reactions[reactionResult] = listOf(Pair(it.second, reactions[reactionResult]!![0].second))
-        }
-
-        resources = getEmptyChemicalCache()
-        spentResources = getEmptyChemicalCache()
-    }
-
     fun getReactionComponents(chemical: Chemical): ReactionComponents {
         return reactions[chemicalResultLookup[chemical]]!!
     }
@@ -87,15 +70,6 @@ class ChemicalCreator(var reactions: ReactionComponentLookup,
 
     fun isOre(chemical: Chemical): Boolean {
         return !chemicalResultLookup.contains(chemical)
-    }
-
-    fun getBaseChemicals(): List<Chemical> {
-        return reactions.filter { isBaseChemical(it.key.first) }.map { it.key.first }
-    }
-
-    fun isBaseChemical(chemical: Chemical) : Boolean {
-        val components = getReactionComponents(chemical)
-        return components.size == 1 && components.any{isOre(it.first)}
     }
 
     private fun getEmptyChemicalCache(): MutableMap<Chemical, Long> {

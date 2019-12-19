@@ -10,17 +10,11 @@ fun main() {
     println("----")
 
     println("ores: ${helper.getOres()}")
-    println(helper.getBaseChemicals())
-
-    // helper.makeOresDistinct()
 
     println("----")
     println(helper.resources)
     println(helper.spentResources)
     println("----")
-
-    println(helper.getOres())
-    println(helper.getBaseChemicals())
 
     println("----")
     helper.createChemical("FUEL")
