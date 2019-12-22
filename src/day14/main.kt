@@ -64,8 +64,6 @@ class Reactor{
 
             if(oreCount > availableOre) {
                 max = mid
-            } else if (oreCount == availableOre) {
-                return mid
             } else { // oreCount < availableOre
                 min = mid
                 if ((max - min) <= 1)
@@ -83,7 +81,7 @@ class Reactor{
 
 
 fun main() {
-    val reactor = Reactor(getReactions(src5))
+    val reactor = Reactor(getReactions(src2))
 
     val result1 = reactor.oreCountForChemical("FUEL", 1)
     val result2 = reactor.maxChemicalCount("FUEL", 1000000000000L)

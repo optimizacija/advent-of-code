@@ -33,8 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/day14/main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+            <state relative-caret-position="330">
+              <caret line="85" column="42" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -363,7 +363,7 @@
       <workItem from="1576780286510" duration="7367000" />
       <workItem from="1576824275789" duration="689000" />
       <workItem from="1576959959500" duration="4609000" />
-      <workItem from="1577017499532" duration="3224000" />
+      <workItem from="1577017499532" duration="3471000" />
     </task>
     <task id="LOCAL-00001" summary="added .idea/">
       <created>1576156037600</created>
@@ -498,15 +498,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576783189313</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Day14: reimplemented part1 and part2 much more optimally">
+      <created>1577021165102</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1577021165102</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37097000" />
+    <option name="totallyTimeSpent" value="37344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1052" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19808307" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -597,7 +603,8 @@
     <MESSAGE value="Day14: part 1 completed" />
     <MESSAGE value="Day14: changed base type Int to Long in all occurences" />
     <MESSAGE value="Day14: Removed base ore functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day14: Removed base ore functions" />
+    <MESSAGE value="Day14: reimplemented part1 and part2 much more optimally" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day14: reimplemented part1 and part2 much more optimally" />
   </component>
   <component name="WindowStateProjectService">
     <state x="562" y="-775" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576482828636">
@@ -806,8 +813,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/day14/main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+        <state relative-caret-position="330">
+          <caret line="85" column="42" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
         </state>
       </provider>
     </entry>
