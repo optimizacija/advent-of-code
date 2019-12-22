@@ -42,8 +42,16 @@ class Connector {
                         else -> {
                         }
                     }
+
+                    /*
+                    val image = renderer.genImage()
+                    day11.print(image)
+                    println()
+                     */
                 }
+
                 else -> error("invalid outputIndex: $outputIndex")
+
             }
             outputIndex = (outputIndex + 1) % 3
         }
@@ -53,8 +61,7 @@ class Connector {
 /*
 input function =
 {
-val image = renderer.genImage()
-day11.print(image)
+val image = renderer.genImage() day11.print(image)
 println()
 var command = -1000000
 while (true) {
